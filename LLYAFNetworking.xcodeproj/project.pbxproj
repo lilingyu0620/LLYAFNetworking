@@ -15,6 +15,7 @@
 		0A7CD35820CA5760003D10DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD35720CA5760003D10DF /* main.m */; };
 		0A7CD36220CA5761003D10DF /* LLYAFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD36120CA5761003D10DF /* LLYAFNetworkingTests.m */; };
 		0A7CD36D20CA5761003D10DF /* LLYAFNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD36C20CA5761003D10DF /* LLYAFNetworkingUITests.m */; };
+		25AFDC8BBCC43DC22A2339CF /* libPods-LLYAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FEAD0DB74077DADFE29601 /* libPods-LLYAFNetworking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		0A7CD36820CA5761003D10DF /* LLYAFNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLYAFNetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7CD36C20CA5761003D10DF /* LLYAFNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAFNetworkingUITests.m; sourceTree = "<group>"; };
 		0A7CD36E20CA5761003D10DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FEAD0DB74077DADFE29601 /* libPods-LLYAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLYAFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53531B7CD4B034EECCD4E5C5 /* Pods-LLYAFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAFNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		FC06E5ADC47E963F4BBD5237 /* Pods-LLYAFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAFNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AFDC8BBCC43DC22A2339CF /* libPods-LLYAFNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				0A7CD36020CA5761003D10DF /* LLYAFNetworkingTests */,
 				0A7CD36B20CA5761003D10DF /* LLYAFNetworkingUITests */,
 				0A7CD34620CA5760003D10DF /* Products */,
+				7BCA049B11FE8B787A4288AB /* Pods */,
+				99C65B2585840868FA8840B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = LLYAFNetworkingUITests;
 			sourceTree = "<group>";
 		};
+		7BCA049B11FE8B787A4288AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC06E5ADC47E963F4BBD5237 /* Pods-LLYAFNetworking.debug.xcconfig */,
+				53531B7CD4B034EECCD4E5C5 /* Pods-LLYAFNetworking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99C65B2585840868FA8840B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49FEAD0DB74077DADFE29601 /* libPods-LLYAFNetworking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A7CD37120CA5761003D10DF /* Build configuration list for PBXNativeTarget "LLYAFNetworking" */;
 			buildPhases = (
+				2B48DC386CC9DB8844CABD7D /* [CP] Check Pods Manifest.lock */,
 				0A7CD34120CA5760003D10DF /* Sources */,
 				0A7CD34220CA5760003D10DF /* Frameworks */,
 				0A7CD34320CA5760003D10DF /* Resources */,
@@ -259,6 +284,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B48DC386CC9DB8844CABD7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LLYAFNetworking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A7CD34120CA5760003D10DF /* Sources */ = {
@@ -428,6 +474,7 @@
 		};
 		0A7CD37220CA5761003D10DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC06E5ADC47E963F4BBD5237 /* Pods-LLYAFNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +489,7 @@
 		};
 		0A7CD37320CA5761003D10DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53531B7CD4B034EECCD4E5C5 /* Pods-LLYAFNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
