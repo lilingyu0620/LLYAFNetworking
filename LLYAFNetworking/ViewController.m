@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "LLYAAA.h"
+#import "LLYBBB.h"
+
 
 @interface ViewController ()
 
@@ -17,7 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [LLYAAA printAllMethod];
+    [LLYBBB printAllMethod];
+    
+    LLYAAA *aaa = [LLYAAA new];
+    [aaa aaa_hateMe];
+    [aaa aaa_loveMe];
+    LLYBBB *bbb = [LLYBBB new];
+    [bbb bbb_hateMe];
+    [bbb bbb_loveMe];
+    
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,8 @@
 		0A7CD35820CA5760003D10DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD35720CA5760003D10DF /* main.m */; };
 		0A7CD36220CA5761003D10DF /* LLYAFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD36120CA5761003D10DF /* LLYAFNetworkingTests.m */; };
 		0A7CD36D20CA5761003D10DF /* LLYAFNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD36C20CA5761003D10DF /* LLYAFNetworkingUITests.m */; };
+		0A8B2C0F20CBB92C0075B46D /* LLYAAA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B2C0E20CBB92C0075B46D /* LLYAAA.m */; };
+		0A8B2C1220CBB9770075B46D /* LLYBBB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B2C1120CBB9770075B46D /* LLYBBB.m */; };
 		25AFDC8BBCC43DC22A2339CF /* libPods-LLYAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FEAD0DB74077DADFE29601 /* libPods-LLYAFNetworking.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,10 @@
 		0A7CD36820CA5761003D10DF /* LLYAFNetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLYAFNetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7CD36C20CA5761003D10DF /* LLYAFNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAFNetworkingUITests.m; sourceTree = "<group>"; };
 		0A7CD36E20CA5761003D10DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8B2C0D20CBB92C0075B46D /* LLYAAA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYAAA.h; sourceTree = "<group>"; };
+		0A8B2C0E20CBB92C0075B46D /* LLYAAA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYAAA.m; sourceTree = "<group>"; };
+		0A8B2C1020CBB9770075B46D /* LLYBBB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYBBB.h; sourceTree = "<group>"; };
+		0A8B2C1120CBB9770075B46D /* LLYBBB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYBBB.m; sourceTree = "<group>"; };
 		49FEAD0DB74077DADFE29601 /* libPods-LLYAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLYAFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53531B7CD4B034EECCD4E5C5 /* Pods-LLYAFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAFNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		FC06E5ADC47E963F4BBD5237 /* Pods-LLYAFNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLYAFNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +123,10 @@
 				0A7CD35320CA5760003D10DF /* LaunchScreen.storyboard */,
 				0A7CD35620CA5760003D10DF /* Info.plist */,
 				0A7CD35720CA5760003D10DF /* main.m */,
+				0A8B2C0D20CBB92C0075B46D /* LLYAAA.h */,
+				0A8B2C0E20CBB92C0075B46D /* LLYAAA.m */,
+				0A8B2C1020CBB9770075B46D /* LLYBBB.h */,
+				0A8B2C1120CBB9770075B46D /* LLYBBB.m */,
 			);
 			path = LLYAFNetworking;
 			sourceTree = "<group>";
@@ -167,6 +177,8 @@
 				0A7CD34120CA5760003D10DF /* Sources */,
 				0A7CD34220CA5760003D10DF /* Frameworks */,
 				0A7CD34320CA5760003D10DF /* Resources */,
+				F07A064D91C56E2704BCBC43 /* [CP] Embed Pods Frameworks */,
+				B113EBA8A092BF53624BB11F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +316,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B113EBA8A092BF53624BB11F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F07A064D91C56E2704BCBC43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLYAFNetworking/Pods-LLYAFNetworking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -311,9 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8B2C1220CBB9770075B46D /* LLYBBB.m in Sources */,
 				0A7CD34D20CA5760003D10DF /* ViewController.m in Sources */,
 				0A7CD35820CA5760003D10DF /* main.m in Sources */,
 				0A7CD34A20CA5760003D10DF /* AppDelegate.m in Sources */,
+				0A8B2C0F20CBB92C0075B46D /* LLYAAA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PW2BL84NY9;
 				INFOPLIST_FILE = LLYAFNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.LLYAFNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PW2BL84NY9;
 				INFOPLIST_FILE = LLYAFNetworking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.LLYAFNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
