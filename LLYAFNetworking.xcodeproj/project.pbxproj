@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A79822A20CF61DF0045D122 /* LLYHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79822920CF61DF0045D122 /* LLYHttpSessionManager.m */; };
 		0A7CD34A20CA5760003D10DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD34920CA5760003D10DF /* AppDelegate.m */; };
 		0A7CD34D20CA5760003D10DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD34C20CA5760003D10DF /* ViewController.m */; };
 		0A7CD35020CA5760003D10DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7CD34E20CA5760003D10DF /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A79822820CF61DF0045D122 /* LLYHttpSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLYHttpSessionManager.h; sourceTree = "<group>"; };
+		0A79822920CF61DF0045D122 /* LLYHttpSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLYHttpSessionManager.m; sourceTree = "<group>"; };
 		0A7CD34520CA5760003D10DF /* LLYAFNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLYAFNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7CD34820CA5760003D10DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A7CD34920CA5760003D10DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				0A7CD35320CA5760003D10DF /* LaunchScreen.storyboard */,
 				0A7CD35620CA5760003D10DF /* Info.plist */,
 				0A7CD35720CA5760003D10DF /* main.m */,
+				0A79822820CF61DF0045D122 /* LLYHttpSessionManager.h */,
+				0A79822920CF61DF0045D122 /* LLYHttpSessionManager.m */,
 			);
 			path = LLYAFNetworking;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			files = (
 				0A7CD34D20CA5760003D10DF /* ViewController.m in Sources */,
 				0A7CD35820CA5760003D10DF /* main.m in Sources */,
+				0A79822A20CF61DF0045D122 /* LLYHttpSessionManager.m in Sources */,
 				0A7CD34A20CA5760003D10DF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
