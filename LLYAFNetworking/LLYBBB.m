@@ -30,18 +30,19 @@ static inline BOOL af_addMethod(Class theClass, SEL selector, Method method) {
 }
 
 + (void)swizzleResumeAndSuspendMethodForClass:(Class)theClass {
-//    Method afResumeMethod = class_getInstanceMethod(self, @selector(bbb_loveMe));
-//    Method afSuspendMethod = class_getInstanceMethod(self, @selector(bbb_hateMe));
-//
-//    if (af_addMethod(theClass, @selector(bbb_loveMe), afResumeMethod)) {
-//        af_swizzleSelector(theClass, @selector(aaa_loveMe), @selector(bbb_loveMe));
-//    }
-//    if (af_addMethod(theClass, @selector(bbb_hateMe), afSuspendMethod)) {
-//        af_swizzleSelector(theClass, @selector(aaa_hateMe), @selector(bbb_hateMe));
-//    }
     
-    af_swizzleSelector(theClass, @selector(aaa_loveMe),self, @selector(bbb_loveMe));
-    af_swizzleSelector(theClass, @selector(aaa_hateMe),self, @selector(bbb_hateMe));
+    Method afResumeMethod = class_getInstanceMethod(self, @selector(bbb_loveMe));
+    Method afSuspendMethod = class_getInstanceMethod(self, @selector(bbb_hateMe));
+
+    if (af_addMethod(theClass, @selector(bbb_loveMe), afResumeMethod)) {
+        af_swizzleSelector(theClass, @selector(aaa_loveMe),self,@selector(bbb_loveMe));
+    }
+    if (af_addMethod(theClass, @selector(bbb_hateMe), afSuspendMethod)) {
+        af_swizzleSelector(theClass, @selector(aaa_hateMe),self,@selector(bbb_hateMe));
+    }
+    
+//    af_swizzleSelector(theClass, @selector(aaa_loveMe),self, @selector(bbb_loveMe));
+//    af_swizzleSelector(theClass, @selector(aaa_hateMe),self, @selector(bbb_hateMe));
 }
 
 

@@ -41,13 +41,13 @@ static NSString const * kTestUrl4 = @"http://nos.netease.com/test-open-movie/nos
     [bbb bbb_loveMe];
     
     
-    [LLYHttpSessionManager shareInstance].didReceiveResponseBlock = ^(NSURLSession *session, NSURLSessionDataTask *dataTask, NSURLResponse *response) {
-        NSLog(@"dataTask = %lu",(unsigned long)dataTask.taskIdentifier);
-    };
-    
-    [LLYHttpSessionManager shareInstance].didReceiveDataBlock = ^(NSURLSession *session, NSURLSessionDataTask *dataTask, NSData *data) {
-        NSLog(@"dataTask = %lu,data = %@",(unsigned long)dataTask.taskIdentifier,data);
-    };
+//    [LLYHttpSessionManager shareInstance].didReceiveResponseBlock = ^(NSURLSession *session, NSURLSessionDataTask *dataTask, NSURLResponse *response) {
+//        NSLog(@"dataTask = %lu",(unsigned long)dataTask.taskIdentifier);
+//    };
+//
+//    [LLYHttpSessionManager shareInstance].didReceiveDataBlock = ^(NSURLSession *session, NSURLSessionDataTask *dataTask, NSData *data) {
+//        NSLog(@"dataTask = %lu,data = %@",(unsigned long)dataTask.taskIdentifier,data);
+//    };
     
 //
 //    [[LLYHttpSessionManager shareInstance] requestWithMethod:LLYHttpMethod_GET fileType:LLYHttpFileType_AUDIO urlString:kTestUrl3 parameters:nil progress:^(NSProgress *downloadProgress) {
@@ -67,25 +67,22 @@ static NSString const * kTestUrl4 = @"http://nos.netease.com/test-open-movie/nos
 //    }];
     
     
-    NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *fileDoc = [NSString stringWithFormat:@"%@/Download",libraryPath];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:fileDoc]) {
-        [[NSFileManager defaultManager] createDirectoryAtPath:fileDoc withIntermediateDirectories:YES attributes:nil error:nil];
-    }
-    NSString *filePath = [NSString stringWithFormat:@"%@/downloadfile.mp3",fileDoc];
-
-    NSURLSessionDownloadTask *task = [[LLYHttpSessionManager shareInstance] downloadWithUrl:kTestUrl3 progress:^(NSProgress *downloadProgress) {
-        NSLog(@"totalunit = %lld,completeunit = %lld",downloadProgress.totalUnitCount,downloadProgress.completedUnitCount);
-    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        return [NSURL fileURLWithPath:filePath];
-    } completionHandler:^(NSURLResponse *response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSLog(@"completion!!!!!!");
-    }];
-    
+//    NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *fileDoc = [NSString stringWithFormat:@"%@/Download",libraryPath];
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:fileDoc]) {
+//        [[NSFileManager defaultManager] createDirectoryAtPath:fileDoc withIntermediateDirectories:YES attributes:nil error:nil];
+//    }
+//    NSString *filePath = [NSString stringWithFormat:@"%@/downloadfile.mp3",fileDoc];
+//
+//    NSURLSessionDownloadTask *task = [[LLYHttpSessionManager shareInstance] downloadWithUrl:kTestUrl3 progress:^(NSProgress *downloadProgress) {
+//        NSLog(@"totalunit = %lld,completeunit = %lld",downloadProgress.totalUnitCount,downloadProgress.completedUnitCount);
+//    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+//        return [NSURL fileURLWithPath:filePath];
+//    } completionHandler:^(NSURLResponse *response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//        NSLog(@"completion!!!!!!");
+//    }];
+//
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

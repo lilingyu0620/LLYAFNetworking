@@ -15,4 +15,8 @@
 - (void)bbb_loveMe;
 
 - (void)bbb_hateMe;
+
++ (void)swizzleResumeAndSuspendMethodForClass:(Class)theClass;
+
+
 @end
